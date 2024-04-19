@@ -24,7 +24,7 @@ export default async function AddEventPage() {
     let data = await response.json();
     // console.log(data);
     const id = data[0].id;
-    redirect("/Col1/" + id);
+    redirect("/event/" + id);
 
     // til en anden gang brug uuid pls
   }
