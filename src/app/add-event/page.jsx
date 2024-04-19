@@ -1,5 +1,14 @@
 export default async function AddEventPag() {
-  function submit() {}
+  function submit(formData) {
+    "use server";
+    let headerlist = {
+      Accept: "application/json",
+      apikey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+      Prefer: "return=representation",
+      "Content-Type": "application/json",
+    };
+    console.log(formData);
+  }
   return (
     <form action={submit}>
       <div className="formcontrol">
