@@ -15,16 +15,18 @@ export default async function AddEventPage() {
       description: formData.get("description"),
     });
 
-    let response = await fetch("https://uwrwptibotlxlvcdeicv.supabase.co/rest/v1/events", {
+    let response = await fetch("https://jlysgfiftmgybuezdgpv.supabase.co/rest/v1/Col1", {
       method: "POST",
       body: bodyContent,
       headers: headersList,
     });
 
     let data = await response.json();
-    //console.log(data);
+    // console.log(data);
     const id = data[0].id;
-    redirect("/events/" + id);
+    redirect("/Col1/" + id);
+
+    // til en anden gang brug uuid pls
   }
   return (
     <form action={submit}>
